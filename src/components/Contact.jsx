@@ -3,7 +3,7 @@ const Contact = () => {
     <>
       <div className="contact-container" id="contact">
         <img
-          src="public/assets/location.webp"
+          src="../assets/location.webp"
           alt="fairtown pizza school location"
         />
         <div className="contact">
