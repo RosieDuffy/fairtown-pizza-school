@@ -3,7 +3,7 @@ const teachers = [
     name: "Paula",
     nickname: "The Dough Dynamo",
     bio: "Meet Paula, our dough dynamo! With a career sprinkled with flour and passion, Paula has been crafting culinary wonders since her teenage years. From mastering the art of kneading to perfecting crusts, she brings contagious energy and expertise to every class.",
-    img: "./assets/teacher-seb.webp",
+    img: "./assets/teacher-paula.webp",
   },
   {
     name: "Seb",
