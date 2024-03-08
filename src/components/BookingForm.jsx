@@ -16,7 +16,7 @@ const BookingForm = () => {
   return (
     <>
       <div className="booking-container">
-        <Link to="/">
+        <Link to="courses">
           <button className="exit-button">&times;</button>
         </Link>
         <div className="booking-form">
