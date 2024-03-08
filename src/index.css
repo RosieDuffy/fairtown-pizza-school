@@ -159,7 +159,7 @@ header {
 /* More Info Styles */
 
 .more-info {
-  background-image: url(./assets/info-background.webp);
+  background-image: url(../assets/info-background.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
