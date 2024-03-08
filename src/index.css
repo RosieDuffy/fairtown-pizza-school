@@ -259,7 +259,7 @@ p {
 
 .courses-container {
   background-color: var(--dark-color);
-  background-image: url(public/assets/courses-background.webp);
+  background-image: url(./public/assets/courses-background.webp);
   background-position: center;
   padding: 5rem 0 2rem 0;
   display: flex;
