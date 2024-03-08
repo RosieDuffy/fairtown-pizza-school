@@ -109,7 +109,7 @@ header {
 /* About Styles */
 
 .intro {
-  background-image: url(src/assets/hands-dough.webp);
+  background-image: url(./assets/hands-dough.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
