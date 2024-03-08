@@ -1,0 +1,723 @@
+@import url("https://fonts.googleapis.com/css2?family=Bevan&family=Nunito:wght@400;1000&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow-color: #f0d67f;
+  --red-color: #e12c2c;
+  --green-color: #3c7c50;
+  --dark-color: #202231;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", serif;
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+/* Header Style */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0d67f9e;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-bottom: -90px;
+  height: 80px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 1.5em;
+  gap: clamp(1rem, 3rem, 4rem);
+  color: var(--red-color);
+  list-style: none;
+}
+
+.nav-menu li {
+  font-weight: 1000;
+  font-size: clamp(1rem, -1.5rem + 3vw, 1.5rem);
+}
+
+.nav-menu a:hover {
+  border-bottom: 5px solid var(--red-color);
+}
+
+.nav-menu a,
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.header-logo {
+  max-height: 50px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* Hero Styles */
+
+.hero {
+  position: relative;
+  background-color: var(--yellow-color);
+  padding: 12rem 1rem 8rem 2rem;
+  display: flex;
+  clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 91%, 0 0);
+  z-index: 3;
+}
+
+.main-logo {
+  width: 80vw;
+  margin: auto;
+  /* animation: bounce2 2s ease; */
+  filter: drop-shadow(5px 5px 10px #baa334dd);
+}
+
+@keyframes bounce2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+}
+
+/* About Styles */
+
+.intro {
+  background-image: url(src/assets/hands-dough.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  margin-top: -90px;
+  z-index: 1;
+}
+
+.intro img {
+  position: absolute;
+  width: 15vw;
+  left: 1em;
+  bottom: 1em;
+}
+
+.about {
+  font-size: clamp(1rem, -1.5rem + 4vw, 3rem);
+  color: var(--yellow-color);
+  text-align: center;
+  background-color: var(--yellow-color);
+  padding: 2rem;
+  margin: 0;
+}
+
+.about-text {
+  color: var(--red-color);
+  font-size: clamp(2.2rem, -1.5rem + 5vw, 7rem);
+}
+
+.about h2 {
+  font-family: "Bevan", serif;
+  margin-top: -3rem;
+}
+
+/* Icons Styles */
+
+.icons {
+  padding: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+/* More Info Styles */
+
+.more-info {
+  background-image: url(./assets/info-background.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+.tagline {
+  color: var(--dark-color);
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem;
+  font-size: clamp(1.25rem, -1.5rem + 2.5vw, 4rem);
+}
+
+/* Teachers Styles */
+
+.teachers-title {
+  background-color: var(--red-color);
+  padding: 3em;
+}
+
+.teachers-title h2 {
+  margin: auto;
+  text-align: center;
+  font-size: 7em;
+  font-family: "Bevan", serif;
+  color: var(--yellow-color);
+  font-size: clamp(2.2rem, -1.5rem + 9vw, 7rem);
+}
+
+.info-teachers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--dark-color);
+}
+
+.info-teachers img {
+  width: 100%;
+  height: 100%;
+}
+
+.teacher {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #282828cc;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.teacher:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: var(--yellow-color);
+  font-size: clamp(1rem, -1.5rem + 4vw, 3rem);
+  font-family: "Bevan", serif;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text h4,
+p {
+  font-size: clamp(1rem, -1.5rem + 2.2vw, 3rem);
+  right: 50%;
+  font-family: "Nunito", serif;
+}
+
+/* Courses Styles */
+
+.courses-title {
+  background-color: var(--yellow-color);
+  padding: 3rem;
+}
+.courses-title h2 {
+  margin: auto;
+  color: var(--dark-color);
+  text-align: center;
+  font-size: clamp(3rem, -1.5rem + 9vw, 7rem);
+  font-family: "Bevan", serif;
+  margin: 0;
+}
+
+.courses-container {
+  background-color: var(--dark-color);
+  background-image: url(./assets/courses-background.webp);
+  background-position: center;
+  padding: 5rem 0 2rem 0;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+}
+
+.courses-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.courses img {
+  width: 12rem;
+  border-radius: 50%;
+  position: sticky;
+  right: 35rem;
+}
+
+.course {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+  min-width: 40vw;
+  box-shadow: 0px 0px 40px #fff;
+  display: flex;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin-bottom: 4rem;
+  transform: translateX(150px);
+  transition: transform 0.2s ease-in-out;
+  position: sticky;
+  cursor: pointer;
+}
+
+.course-text {
+  padding-left: 2rem;
+}
+
+.course:hover {
+  transform: translateX(100px);
+}
+
+.courses h3 {
+  font-family: "Bevan", serif;
+  font-size: clamp(1.5rem, -1.5rem + 3vw, 2rem);
+  margin-bottom: -0.5em;
+  border-bottom: 3px solid;
+}
+
+.courses h4 {
+  font-size: clamp(1.2rem, -1.5rem + 2.2vw, 2rem);
+  margin-bottom: -0.25em;
+}
+
+/* Modal Styles */
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.modal {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  z-index: 100;
+  background-color: var(--yellow-color);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  color: var(--dark-color);
+}
+
+.modal-content img {
+  width: 20rem;
+  position: static;
+  right: 0;
+  border-radius: 0;
+}
+
+.modal-content h3 {
+  margin-top: 1rem;
+}
+
+.modal-content p {
+  padding: 1rem;
+}
+
+.closeBtn {
+  position: fixed;
+  top: 8px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--red-color);
+}
+
+.modal-content button {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+/* Contact Styles */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  background-color: var(--yellow-color);
+  align-items: center;
+  padding: 4rem;
+}
+
+.contact-container img {
+  background-color: white;
+  width: 35%;
+  height: auto;
+}
+
+.contact {
+  color: var(--dark-color);
+  text-align: left;
+  font-size: clamp(1rem, -1.5rem + 3vw, 3rem);
+  height: 100%;
+}
+
+.contact h3,
+.contact h4 {
+  font-family: "Bevan", serif;
+  margin-bottom: 0;
+}
+
+.contact h3 {
+  margin-top: 0;
+}
+
+.contact ul {
+  padding: 0;
+}
+
+.contact li {
+  list-style: none;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--yellow-color);
+}
+
+.social-icons {
+  padding: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+  padding-right: 1.2rem;
+  cursor: pointer;
+}
+
+.footer-text p {
+  font-size: clamp(0.8rem, -1.5rem + 2vw, 3rem);
+  padding: 1rem;
+  margin: 0;
+}
+
+/* Booking Form Styles */
+
+.booking-container {
+  background-image: url(src/assets/booking-background.webp);
+  background-size: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 2rem;
+}
+
+.booking-form {
+  background-color: #202231cd;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: var(--yellow-color);
+  text-align: center;
+}
+
+.form-inputs {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.booking-form .submit-button {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.booking-container .exit-button {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  border-radius: 8px;
+  font-size: 3rem;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.booking-container .submitted {
+  color: var(--red-color);
+  margin: 0;
+}
+
+.not-found {
+  padding: 5rem;
+  color: var(--red-color);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1500px) {
+  .courses-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .course {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    transform: translateX(0);
+    min-width: 40vw;
+  }
+
+  .course:hover {
+    transform: translateY(-20px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .course-text {
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 910px) {
+  .info-teachers {
+    display: block;
+    padding: 0 6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .icons {
+    flex-wrap: wrap;
+  }
+
+  .icon {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .nav-menu {
+    gap: 1.5em;
+    margin-right: 1.5em;
+    font-weight: 1000;
+    font-size: clamp(1rem, -1.5rem + 3vw, 1.5rem);
+    color: var(--red-color);
+    list-style: none;
+  }
+
+  .course {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 50px;
+  }
+
+  .course img {
+    width: 15rem;
+    margin-left: 6%;
+  }
+
+  .icons {
+    padding: 5rem 10rem;
+  }
+
+  .icon {
+    padding: 1rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-container img {
+    width: 80%;
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+  .modal {
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .modal-content img {
+    width: 16rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .teachers {
+    background-color: var(--dark-color);
+  }
+
+  .info-teachers {
+    all: unset;
+    display: block;
+  }
+
+  .info-teachers img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .teacher {
+    all: unset;
+  }
+
+  .overlay {
+    all: unset;
+    height: 100%;
+  }
+
+  .teacher:hover .overlay {
+    all: unset;
+  }
+
+  .text {
+    all: unset;
+    text-align: center;
+    color: var(--yellow-color);
+  }
+
+  .text h3 {
+    font-family: "Bevan", serif;
+    font-size: clamp(1.5rem, -1.5rem + 4vw, 3rem);
+  }
+  .text p {
+    margin: 0;
+    padding: 0 3rem 2rem 3rem;
+    font-size: clamp(0.8rem, -1.5rem + 4vw, 3rem);
+  }
+
+  .nav-menu {
+    gap: 1rem;
+    color: var(--red-color);
+    padding-left: 0;
+  }
+
+  .nav-menu li {
+    font-size: clamp(0.8rem, -1.5rem + 3vw, 1.5rem);
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+
+  .intro,
+  .more-info {
+    height: 50vh;
+  }
+
+  .booking-form {
+    height: 100%;
+    width: 90vw;
+  }
+
+  .form-inputs {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .modal-content p {
+    margin: 1rem;
+    font-size: 0.75rem;
+  }
+
+  .main-logo {
+    width: 90vw;
+  }
+
+  .hero {
+    padding: 12rem 1rem 8rem 1rem;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .modal-content img {
+    width: 10rem;
+  }
+}
