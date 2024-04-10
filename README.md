@@ -1,8 +1,35 @@
-# React + Vite
+# Fairtown Pizza School
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Homepage for a fictional pizza school. Users can find information on the school, it's teachers, courses and contact details along with a form to book a place.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+- **Modal windows** with information on each pizza course
+- **Booking form** for users to book on to a course
+- **Interactive information** on each of the teachers available
+
+### Installing
+
+A step by step series of examples that tell you how to get a development environment running.
+
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the development server with `npm run dev`
+
+
+
+## Built With
+
+- [React](https://reactjs.org/) - The web framework used
+- [Vite](https://vitejs.dev/) - Build tool and development server
+
+
+## Contributing
+
+Contributions are welcome! If you have any ideas for improvement or bug fixes, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/yourusername/your-repo/blob/main/LICENSE.md) file for details
