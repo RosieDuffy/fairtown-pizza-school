@@ -571,6 +571,27 @@ footer a {
   .icon {
     padding: 1rem;
   }
+
+ 
+}
+
+@media only screen and (max-width: 698px){
+  .icons {
+    padding: 5rem 2rem;
+  }
+
+  .icon {
+    padding: 1rem;
+  }
+
+  .icon svg{
+    width: 4rem;
+  }
+
+  .icon p{
+    font-size: 0.7rem;
+  
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -595,13 +616,7 @@ footer a {
     margin-left: 6%;
   }
 
-  .icons {
-    padding: 5rem 10rem;
-  }
 
-  .icon {
-    padding: 1rem;
-  }
 
   .contact-container {
     flex-direction: column;
