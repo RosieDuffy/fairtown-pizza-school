@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Modal = ({ open, onClose, course }) => {
-  if (!open) return null; //if modal is not open, return null
+  if (!open) return null; 
   return (
     <div onClick={onClose} className="modal-overlay">
       <div
